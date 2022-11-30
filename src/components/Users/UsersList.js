@@ -1,5 +1,5 @@
 import Card from "../UI/Card";
-import classes from "../Users/AddUser.module.css";
+import classes from "./UsersList.module.css";
 
 const UsersList = (props) => {
   return (
@@ -7,7 +7,7 @@ const UsersList = (props) => {
       <ul>
         {props.users.map((user) => {
           return (
-            <li>
+            <li key={user.id}>
               {user.name} ({user.age} years old)
             </li>
           );
